@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Muli:900');
+nav
+{
+    margin: 0 7%;
+    position: relative;
+    padding: 17px 0;
+    text-align: right;
+    
+}
+nav a
+{
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    color: #F4F4F4;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline;
+    margin: 0 5px;
+    padding: 5px 12px;
+}
+nav a:hover
+{
+    color: rgb(221, 221, 221);
+}
+@media only screen and (max-width: 1170px) {
+    nav
+    {
+        text-align: left !important; 
+    }
+    nav a
+    {
+        color: #2D2D2D !important;
+    }
+    nav a:hover
+    {
+        color: rgb(94, 94, 94) !important;
+    }
+    nav a:focus
+    {
+        color: rgb(24, 24, 24) !important;
+    }
+}
+
+
+html, body 
+{
+    height: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    /* text-shadow: rgba(173, 129, 250, .35) 1px 1px 10px; */
+    /* text-shadow: rgba(9, 66, 253, 0.568) 1px 1px 7px; */
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    font-family: 'Muli', sans-serif;
+}
+
+main
+{
+    background-color: hsl(253, 23%, 15%); /* Old browsers */
+
+    display: block; /* IE FIX */
+    background: url(img/2.jpg) no-repeat center center;
+    
+    background-repeat: no-repeat;
+    min-height: 100%;
+}
+main::before
+{
+    content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+    background: hsl(253, 23%, 15%); /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #fe6ab3 0%, #ad81fa 100%) fixed; /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #fe6ab3 0%,#ad81fa 100%) fixed; /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #ad81fa 0%,rgb(203, 214, 223) 100%) fixed;
+    background: linear-gradient(135deg, #5e5057 0%,#33254d 100%) fixed;
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: linear-gradient(135deg, #fe6ab3 0%,#ad81fa 100%) fixed; 
+    background: linear-gradient(135deg, hsl(253, 23%, 15%) 0%,hsla(260, 100%, 9%, 0.5) 100%) ;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fe6ab3', endColorstr='#ad81fa',GradientType=1 );  /* IE6-9 fallback on horizontal gradient */
+}
+
+
+main section
+{
+    /* perspective: 1000px; */
+
+    width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+main section h1
+{
+    transform-origin: left center;
+    text-transform: uppercase;
+    font-size: 4em;
+    position: relative;
+    color: white;
+    transform: translate3d(0, 0,0);
+    z-index: 1;
+}
+
+main section p
+{
+    transform-origin: left center;
+
+    margin: 1.5em 0 1em 0;
+    font-size: 1.2em;
+    line-height: 1.25em;
+    text-align: justify;
+    color: white;
+}
+
+@media only screen and (max-width: 650px) {
+    h1,h2,h3
+    {
+        word-wrap: break-word;
+    }
+    main section h1
+    {
+        font-size: 3em;
+    }
+    main section p
+    {
+        font-size: 1.1em;
+    }
+
+}
+input, button, submit { border:none; } 
+
+button
+{
+    transform-origin: left center;
+    color: white;
+    background-color: transparent;
+    border: white 3px solid;
+    padding: 9px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    transition: background-color .2s ease-out, color .2s ease-out, border .2s ease-out;
+}
+
+button:hover
+{
+    background-color: white; /* Old browsers */
+    cursor: pointer;
+    color: hsl(253, 23%, 15%);;
+    border-color: white;
+}
+
+button:focus
+{
+    background-color: white; /* Old browsers */
+    color: hsl(253, 23%, 15%);
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#full
+{
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+}
+#right
+{
+    width: 40%;
+    position: absolute;
+    right:0;
+    top:0;
+    opacity: 1;
+}
+
+#left
+{
+    width: 40%;
+    position: absolute;
+    bottom:0;
+    left:0;
+}
+
+.selectMoveDisable {
+    pointer-events: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#skills
+{
+    padding: 50px 7%;
+    top: 0;
+    position: relative;
+    height: auto;
+    width: 100%;
+    background: rgb(32, 32, 32);
+}
+
+.column {
+    display: inline-block;
+    width: 12.5%;
+    height: 75px;
+    margin: 17.5px -4px 17.5px 0;
+}
+
+hr
+{
+    margin: 17.5px;
+    height: 1.25px;
+    background: rgb(228, 228, 228);
+}
+
+@media only screen and (max-width: 1000px) {
+    .column
+    {
+        width: 25%;
+    }
+    main section
+    {
+        width: 90%;
+    }
+
+    #right, #left
+    {
+        visibility: hidden;
+    }
+}
+
+#about
+{
+	background: url(img/1.jpg) no-repeat center center;
+    background-color: hsl(253, 23%, 15%); /* Old browsers */
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    position: relative;
+}
+
+#about::before
+{
+    content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+    background: #ad81fa; /* Old browsers */
+    background: -moz-linear-gradient(45deg, #fe6ab3 0%, #ad81fa 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #fe6ab3 0%,#ad81fa 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #fe6ab3 0%,#ad81fa 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: linear-gradient(45deg, #33254d 0%,#3f3f3f 100%) fixed;
+    background: linear-gradient(45deg, hsl(253, 23%, 15%) 0%,hsl(261, 35%, 22%) 100%);
+    background: linear-gradient(135deg, hsl(253, 23%, 15%) 0%,hsl(260, 100%, 9%) 100%) ;
+    background: linear-gradient(135deg, hsl(253, 23%, 15%) 0%,hsla(260, 100%, 9%, 0.5) 100%);
+
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fe6ab3', endColorstr='#ad81fa',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+#about section
+{
+    position: absolute;
+    z-index: 1;
+    width: 50%;
+    top: 50%;
+    margin-left: 7%;
+    transform: translate3d(0%, -50%, 0);
+}
+
+
+#about section h2
+{
+    font-size: 3em;
+    text-transform: uppercase;
+    color: white;
+    
+}
+
+#about section p
+{
+    color: white;
+    margin: 1.5em 0 1em 0;
+    line-height: 1.25em;
+    font-size: 1.2em;
+
+    text-align: justify;
+    
+}
+
+
+@media only screen and (max-width: 1000px)
+{
+    #half
+    {
+        visibility: hidden;
+    }
+    #about section
+    {
+        width: 70%;
+        right: 50%;
+        transform: translate3d(50%, -50%, 0);
+        margin-left: 0%;
+        
+    }
+
+    
+}
+
+
+.line-bottom
+{
+    border-bottom: 3px #23e8fd solid;
+}
+.line-left
+{
+    border-left: 3px #23e8fd solid;
+    padding-left: 25px;
+}
+.line-right
+{
+    border-right: 3px #23e8fd solid;
+    padding-right: 25px;
+}
+
+
+#p-left
+{
+    transform-origin: right bottom;
+}
+
+#p-right
+{
+    
+    text-align: right;
+    transform-origin: left top;
+
+}
+
+#half
+{
+    position: absolute;
+    height: 100%;
+    right: 0;
+}
+
+#newSection
+{
+    /* overflow: hidden; */
+    
+    background: #ad81fa; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #fe6ab3 0%, #ad81fa 100%) fixed; /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #fe6ab3 0%,#ad81fa 100%) fixed; /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #fe6ab3 0%,#ad81fa 100%) fixed; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fe6ab3', endColorstr='#ad81fa',GradientType=1 );  /* IE6-9 fallback on horizontal gradient */
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+#design
+{
+    /* overflow: hidden; */
+    background: rgb(32, 32, 32);
+
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#design img
+{
+    height: 50%
+}
+
+#img-left
+{
+    position: absolute;
+    padding-left: 7%;
+    top:50%;
+    transform: translate3d(0, -50%, 0);
+    margin-right: 7%;
+}
+
+#design section
+{
+    position: absolute;
+    z-index: 1;
+    right: 7%;
+    width: 55%;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+}
+
+#design section p
+{
+    color: white;
+    margin: 1.5em 0 1em 0;
+    line-height: 1.25em;
+    font-size: 1.2em;
+
+    text-align: justify;
+    
+}
+
+#design section h3
+{
+    font-size: 2em;
+    text-transform: uppercase;
+    color: white;
+    
+}
+#img-bottom
+{
+    position: absolute;
+    bottom:0%;
+}
+
+
+
+
+@media only screen and (max-width: 1000px)
+{
+    #img-left
+    {
+        visibility: hidden;
+        
+    }
+
+    #design section
+    {
+        right: 50%;
+        
+        width: 75%;
+        top: 50%;
+        transform: translate3d(50%, -50%, 0);
+    }
+}

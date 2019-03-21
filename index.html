@@ -1,191 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>Muhamed Karajic</title>
+
     <link rel="stylesheet" href="style.css">
-    
 
-	<title>Muhamed Karajic</title>
-    
-	<link rel="shortcut icon" href="">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head> 
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <main>
+        <img class="selectMoveDisable" id="right" src="/img/rightW.svg">
+        <img class="selectMoveDisable" id="left" src="/img/leftW.svg">
 
+        <section>
+            <h1 id="paralex_h1">Let's build something amazing together<span id="blink">.</span></h1>
 
-<body onresize="updateVideo()">
-    
-    <div id="overlay"></div>
+            <p id="paralex_p">  Muhamed Karajić a results-driven, customer-focused, articulate and analytical Software Engineer who can think “out of the box”.
+                                Strong skills in design and integration problem-solving skills. Skilled in developing business plans, algorithms and data structure.
+                                Interested in a challenging technical track career in an application development environment. </p>
+            <button id="paralex_button">DOWNLOAD CV</button>
+        </section>
+    </main>
 
-    
-    <div class="containerNav clearfix">
-        <!-- <p>&#x3CMuhamed Karajic&#x3E</p> -->
-        <div>
-            <img id="logo" draggable="false" src="logo.svg" height="40px" alt="logo">
-        </div>
-		
-        <div class="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="background.html">About</a></li>
-                <li><a href="modernbutton.html">Contact</a></li>
-            </ul>
-        </div>
+    <div  id="skills" class="selectMoveDisable">
+        <hr/>
+        <img class="column" src="/img/html.svg" alt="">
+        <img class="column" src="/img/css.svg" alt="">
+        <img class="column" src="/img/js.svg" alt="">
+        <img class="column" src="/img/cpp.svg" alt="">
+        <img class="column" src="/img/wordpress.svg" alt="">
+        <img class="column" src="/img/sololean.svg" alt="">
+        <img class="column" src="/img/datacamp.svg" alt="">
+        <img class="column" src="/img/pluralsight.svg" alt="">
+        <hr/>
+    </div>
+
+    <div id="about">
+        <img class="selectMoveDisable" id="half" src="/img/halfW.svg">
+
+        <section id="paralax22">
+            <h2 id="paralex_h2">Web development</h2>
+            <p id="p-left"  class="line-left"> Let's be honest and cut through the marketing fluff. You need a website that looks amazing and actually works. Bottom line, that's what I do. 
+                 </p>
+            <p id="p-right"  class="line-right"> And if you want to learn more about working with me, pick up the phone and give me a call (or email). </p>
+        </section>
+
     </div>
     
-    <div class="wrapperBottom ">
-        <!-- clearfix -->
-        
-        <div class="social-media clearfix">
-            <!-- Add font awesome icons -->
-            <a href="https://www.facebook.com/muhamedkarajic" target="_blank" class="fa fa-facebook"></a>
-            <a href="https://www.linkedin.com/in/muhamedkarajic/" target="_blank" class="fa fa-linkedin"></a>
-            <a href="https://github.com/muhamedkarajic" target="_blank" class="fa fa-github"></a>
-            <div class="tooltip">
-                <button onclick="copyToClipboard()" class="fa fa-skype"><span id="testing" class="tooltiptext">Username copied!</span></button>
-            </div>
-            <button id="video-button" onclick="pauseStream()" class="fa fa-play"></button>
-			
-    </div>
-    
-</div>
+    <div id="design">
+            <img class="selectMoveDisable" id="img-left" src="/img/design.svg" alt="">
 
-<header class="v-header">
-    <div class="fullscreen-video-wrap">
-            <div id="spinner"></div>
-            <video id="video" loop="loop" muted="muted" volume="0 " preload="metadata" autoplay = "autoplay" poster="poster.png">
-                <source src="intro.mp4#t=1" media="only screen and (min-device-width: 568px)" > 
-                <!-- <source src="video.webm">  -->
-            </video>
-        </div>
-    </header>
-        <div class="box-wrapper">
-            <div class="rowText ">
-                <div class="columnText ">
-                    <h3 class="title">Vatrogasac ili informaticar: </h3>
-                    <p>Bilo jednom davno, jedno odeljenje, nekad su bili prvi razred osnovne skole, u tom odeljenju je bio jedan mali djecak koji je htio biti informaticar kad odreaste, ipak nije poznavao ništa o informatici, samo je sanjar bio, i voliio recunare Jednog dana uciteljica je imala interesantan zadatak za sve ucenike, uzela je papir veliki i redom je ispisala imena i prezimena svih ucenika, sa jednom dodatnom kolonom, gdje su trebali da upišu
-                        <a href="# ">šta da u životu žele biti</a>.</p>
-                    </div>
+            <section>
+                <h3 id="h3">Graphic <span class="line-bottom">Design</span></h3>
+                <p id="design-left" > I provide high quality design, development, videos, animations, tips, and more. Since what you showcase on your website is key to telling your story effectively, 
+                        we also offer creative content strategy and production services.</p>
+                <p id="design-right" >Whether you need a new website, a hand with content or both, we can help. We're all about streamlined design and content that put you and your work front and center. </p>
                     
-                    <div class="columnText ">
-                <h3 class="title">Spark Startup: </h3>
-
-                <p>Imali su jedan školski sat da razmisle i odluce šta ce napisati, išli su redom, vecina ucenika je napisala vatrogasac ili policajac, neki su napisali doktor. Inace su to svi stavili zbog toga što su takve stvari vidjeli na TV-u, nisu imali neki odreden razlog zašto baš to. Medu njima je bio jedan djecak koji je strašno volio kompjutere iako nije znao šta da napiše, i nije razmišljao o tome, znao je da želi nešto raditi sa kompjuterima, htio je stviti sebi visok cilj, nešto da u životu postigne visoko, ipak dosta ga je to plašilo što nije imao najbolje ocjene u školi, trudio se al uvijek se zbuni ili prepadne ispita, pa je znao cesto dobiti i lošiju ocjenu od one za koju zna,</p>
-            </div>
-
-        <h3 class="title">Sposobnosti: </h3>
-        <div class="row">
-            <div class="halfText ">
-                <p>SPARK is an advanced digital technology acceleration platform dedicated to regional startups and projects commissioned by leading European companies. Our programs are SPARK school, SPARK r&d, SPARK startup and SPARK business. Users are individuals, teams, investors, companies, researchers, and sponsors. Become our partner and join the impact.</p>
-                <p>Experience the features of our platform, become the user of our programs. Scale your business faster, reduce operational complexity, improve your learning curve, increase efficiency. Learn more about our programs and find the ones that suit you.</p>
-
-            </div>
-        </div>
+            </section>
 
     </div>
-</div>
-   
-    <div class="rowView " style="background-color: black; position: relative; overflow: hidden;">
-                <video id="designVideo"  autoplay="autoplay" loop="loop" muted="muted" volume="0 " preload="auto" style="position: absolute; min-width: 100%; min-height: 100%; top:50%; left:50%; transform: translate(-50%, -50%);" >
-                        <source src="ae.mp4" type="video/mp4">
-                            <!-- <source src="http://videos.ctfassets.net/wrfb3hbaoyr0/13eGh2oZAWa2Eg6kCcqMme/a2901f25d008debea9a0518deffb5175/homepage-background_V5.mp4" type="video/mp4"> -->
-                            </video>
-        <div class="columnView" onmouseover="updateDesignVideo(1)">
-            <div class="boxAdobe">
-                <h2 class="adobe">Ae</h2>
-            </div>
-            <p>For motion graphics, animation and video professionals, After Effects is as important as Photoshop is to designers and photographers – if not more so. It’s an all-encompassing application with a professional toolset designed for anything from titling to character animation, compositing and more. Its timeline and node-based approach makes it very easy to quickly animate anything. And as you delve deeper into the feature set, you can soon see why animators and artists on major motion pictures like Iron Man 3 and Oblivion make it their tool of choice (you can see how it was used on these films here).</p>
-        </div>
 
-        <div onmouseover="updateDesignVideo(2)" class="columnView">
-            <div class="boxAdobe">
-                <h2 class="adobe" style="border-color: #EB77FF;">Pr</h2>
-            </div>
-            <p>Premiere Pro CC is the continually evolving professional video editing program from Adobe. It’s the sum of decades of design, feedback and refinement. Adobe does a stellar job of listening to its users and providing the tools and features they want. The result is a nonlinear editor that has the power, versatility and depth to create any video project you put to it, whether it be a full-length movie, music video, vlog post or instructional demonstration.</p>
-            <br>
-            <p>This professional video editor is one of the few names in the business that earns the title “industry standard.” The first step when creating any video project with Premiere Pro is capturing or importing your video footage, audio and other elements into the software. Importing media that's already on your computer is the most straightforward, and capturing files from digital media, such as your camera, is similarly simple.</p>
-        </div>
+    <div id="newSection">
+        <img class="selectMoveDisable" id="img-bottom" src="/img/bottom.svg" alt="">
 
-
-        <!-- background-color: rgba(38, 20, 0, 0.8); -->
-        <div  class="columnView">
-            <div class="boxAdobe">
-                <h2 class="adobe" style="border-color: #FF7900">Ai</h2>
-            </div>
-
-            <p>Adobe Illustrator is a vector graphics editor developed and marketed by Adobe Systems. Early versions of the software did not support working in preview mode and users needed to have two windows open on their desktop in order to have a live preview of their work. One window to show the work in progress, the other window to show a preview of the work in progress. </p>
-            <br>
-			<p>Although during its first decade Adobe developed Illustrator primarily for Macintosh, it sporadically supported other platforms. In the early 1990s, Adobe released versions of Illustrator. Originally designed for the Apple Macintosh, development of Adobe Illustrator began in 1985. Along with Creative Cloud, Illustrator CC was released.</p>
-        </div>
-        <!-- background-color: rgba(0, 29, 37, 0.8); -->
-        <div class="columnView">
-            <div class="boxAdobe">
-                <h2 class="adobe" style="border-color: #00C9FF;">Ps</h2>
-            </div>
-            <p>Photoshop started the digital image manipulation revolution, and Adobe's groundbreaking application continues to fortify its position as the best photo editing software on the planet. If you need layered image editing, including typography, 3D modeling, and drawing, you need Photoshop. The latest 2018 update adds AI-powered object selection, lots of new brush capabilities, support for spherical panoramas, and more. Photoshop remains PCMag's unquestioned Editors' Choice for professional photo editing software.</p>
-        </div>
     </div>
 
-    <div class="box-wrapper" style="padding-bottom: 50px;">
-        <h3 class="title">O nama: </h3>
-        <p style="text-align: justify">The latest 2018 update adds AI-powered object selection, lots of new brush capabilities, support for spherical panoramas, and more. Photoshop remains PCMag's unquestioned Editors' Choice for professional photo editing software.</p>
-        
-        
-        
-        <h3 class="title">Opis: </h3>
-        <p style="text-align: justify">The SPARK Advisory Board is formed by four high-profile international businessmen (Bijan Khezri, as the Chairman of Advisory Board, Felix Geyr, Maik Käbisch and Dr. Franz-Josef Seidensticker). They will support SPARK in specific development queries as well as the overall learning process about global technology and business trends.
-        </p>
-	</div>
 
-
-    <div class="preview-bar" id="block1"> </div>
-    <div class="preview-bar" id="block2" > </div>
-    
-
-    <div id="gallaryContainer">
-    <div id="gallaryImage" onmouseover="noneImage()"></div>
-    <div class="box-wrapper">
-        <!-- <div class="preview-bar" id="block3"> </div> -->
-        <div class="row">
-            <div class="column">
-                <img onmouseover="imageUpdate(this)" onmouseout="imageDelete(this)" src="https://picsum.photos/500/300?image=0 ">
-                <img onmouseover="imageUpdate(this)" onmouseout="imageDelete(this)" src="https://picsum.photos/500/500?image=10 ">
-                <img onmouseover="imageUpdate(this)" onmouseout="imageDelete(this)" src="https://picsum.photos/500/600?image=20 ">
-                <img onmouseover="imageUpdate(this)" onmouseout="imageDelete(this)" src="https://picsum.photos/500/100?image=30 ">
-                <img onmouseover="imageUpdate(this)" onmouseout="imageDelete(this)" src="https://picsum.photos/500/400?image=40 ">
-                <img onmouseover="imageUpdate(this)" onmouseout="imageDelete(this)" src="https://picsum.photos/500/700?image=69 ">
-            </div>
-            <div class="column">
-                <img onmouseover="imageUpdate(this)" onmouseout="imageDelete(this)" src="https://picsum.photos/500/700?image=90 ">
-                <img onmouseover="imageUpdate(this)" onmouseout="imageDelete(this)" src="https://picsum.photos/500/100?image=52 ">
-                <img onmouseover="imageUpdate(this)" onmouseout="imageDelete(this)" src="https://picsum.photos/500/400?image=24 ">
-                <img onmouseover="imageUpdate(this)" onmouseout="imageDelete(this)" src="https://picsum.photos/500/200?image=25 ">
-                <img onmouseover="imageUpdate(this)" onmouseout="imageDelete(this)" src="https://picsum.photos/500/500?image=48 ">
-                <img onmouseover="imageUpdate(this)" onmouseout="imageDelete(this)" src="https://picsum.photos/500/300?image=57 ">
-            </div>
-            <div class="column">
-                <img onmouseover="imageUpdate(this)" onmouseout="imageDelete(this)" src="https://picsum.photos/550/500?image=121 ">
-                <img onmouseover="imageUpdate(this)" onmouseout="imageDelete(this)" src="https://picsum.photos/550/200?image=75 ">
-                <img onmouseover="imageUpdate(this)" onmouseout="imageDelete(this)" src="https://picsum.photos/550/100?image=234 ">
-                <img onmouseover="imageUpdate(this)" onmouseout="imageDelete(this)" src="https://picsum.photos/550/300?image=13 ">
-                <img onmouseover="imageUpdate(this)" onmouseout="imageDelete(this)" src="https://picsum.photos/550/400?image=43 ">
-                <img onmouseover="imageUpdate(this)" onmouseout="imageDelete(this)" src="https://picsum.photos/550/800?image=82 ">
-            </div>
-            <div class="column">
-                <img onmouseover="imageUpdate(this)" onmouseout="imageDelete(this)" src="https://picsum.photos/700/200?image=23 ">
-                <img onmouseover="imageUpdate(this)" onmouseout="imageDelete(this)" src="https://picsum.photos/700/500?image=34 ">
-                <img onmouseover="imageUpdate(this)" onmouseout="imageDelete(this)" src="https://picsum.photos/700/400?image=21 ">
-                <img onmouseover="imageUpdate(this)" onmouseout="imageDelete(this)" src="https://picsum.photos/700/800?image=19 ">
-                <img onmouseover="imageUpdate(this)" onmouseout="imageDelete(this)" src="https://picsum.photos/700/300?image=42 ">
-                <img onmouseover="imageUpdate(this)" onmouseout="imageDelete(this)" src="https://picsum.photos/700/300?image=21 ">
-            </div>
-        </div>
-    </div>
-</div>
+    <script type="text/javascript" src="script.js"></script>
 </body>
-<script type="text/javascript" src="script.js"></script>
-
 </html>
