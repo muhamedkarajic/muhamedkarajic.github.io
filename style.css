@@ -18,6 +18,17 @@
     animation: fadeIn forwards ease-out .75s;
 }
 
+.fadeOut
+{
+    animation: fadeIn forwards ease-out .75s reverse;
+}
+
+
+h1, h2, h3, p, button,.column
+{
+    opacity: 0;
+}
+
 nav
 {
     margin: 0 7%;
