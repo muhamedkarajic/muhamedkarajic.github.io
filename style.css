@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 @import url('https://fonts.googleapis.com/css?family=Muli:900');
+
+
+@keyframes fadeIn {
+    from { 
+        transform: translate3d(0, 50px,0); 
+        opacity: 0;
+    }
+    to { 
+        transform: translate3d(0, 0px,0); 
+        opacity: 1;
+    }
+}
+
+.fadeIn
+{
+    
+    animation: fadeIn forwards ease-out 1s;
+}
+
 nav
 {
     margin: 0 7%;
@@ -48,6 +67,7 @@ html, body
 {
     height: 100%;
     font-family: 'Ubuntu', sans-serif;
+    scrollbar-width: none;
     /* text-shadow: rgba(173, 129, 250, .35) 1px 1px 10px; */
     /* text-shadow: rgba(9, 66, 253, 0.568) 1px 1px 7px; */
 }
@@ -57,13 +77,22 @@ h1, h2, h3, h4, h5, h6
     font-family: 'Muli', sans-serif;
 }
 
+#background-image
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+}
 main
 {
     background-color: hsl(253, 23%, 15%); /* Old browsers */
-
-    display: block; /* IE FIX */
-    background: url(img/2.jpg) no-repeat center center;
     
+    display: block; /* IE FIX */
+    background: url(img/2.jpg) no-repeat center center fixed;
+    background-size: cover;
+    
+
     background-repeat: no-repeat;
     min-height: 100%;
 }
@@ -87,10 +116,10 @@ main::before
 }
 
 
+
 main section
 {
-    /* perspective: 1000px; */
-
+    perspective: 1000px;
     width: 75%;
     position: absolute;
     top: 50%;
@@ -100,10 +129,11 @@ main section
 
 main section h1
 {
-    transform-origin: left center;
+    
+    transform-origin: center center;
     text-transform: uppercase;
-    font-size: 4em;
     position: relative;
+    font-size: 4em;
     color: white;
     transform: translate3d(0, 0,0);
     z-index: 1;
@@ -111,7 +141,7 @@ main section h1
 
 main section p
 {
-    transform-origin: left center;
+    transform-origin: center center;
 
     margin: 1.5em 0 1em 0;
     font-size: 1.2em;
@@ -188,7 +218,7 @@ button:focus
 #left
 {
     width: 40%;
-    position: absolute;
+    position: fixed;
     bottom:0;
     left:0;
 }
@@ -244,12 +274,14 @@ hr
 
 #about
 {
-	background: url(img/1.jpg) no-repeat center center;
+    background: url(img/1.jpg) no-repeat center center fixed;
+    background-size: cover;
     background-color: hsl(253, 23%, 15%); /* Old browsers */
     width: 100%;
     min-height: 100%;
     height: auto;
     position: relative;
+    z-index: 50;
 }
 
 #about::before
