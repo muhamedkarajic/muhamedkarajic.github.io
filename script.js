@@ -119,13 +119,13 @@ function effects() {
 
 
  
-$('html, body').on('swipedown',function(){
+$('#bodyMain').on('swipedown',function(){
     $('html, body').animate({
         scrollTop: $("#design").offset().top
     }, 1500, 'swing');
 
 } );
-$('html, body').on('swipeup',function(){
+$('#bodyMain').on('swipeup',function(){
     $('html, body').animate({
         scrollTop: $("#design").offset().top
     }, 1500, 'swing');
