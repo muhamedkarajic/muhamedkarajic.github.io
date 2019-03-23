@@ -15,8 +15,7 @@
 
 .fadeIn
 {
-    
-    animation: fadeIn forwards ease-out 1s;
+    animation: fadeIn forwards ease-out .75s;
 }
 
 nav

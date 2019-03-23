@@ -42,9 +42,9 @@ var offset = window.pageYOffset;
 function parallex() {
     offset = window.pageYOffset;
 
-    applyParallex(h1, 0, offset, -1.10, 0, 0);
-    applyParallex(p, 0, offset, -1.15, 0, .0);
-    applyParallex(button, 0, offset, -1.20, 0, .0);
+    applyParallex(h1, 0, offset, .20, 0, 0);
+    applyParallex(p, 0, offset, .15, 0, .0);
+    applyParallex(button, 0, offset, .10, 0, .0);
     applyParallex(left, 0, offset, .75, 0, .0);
     applyParallex(right, 0, offset, -.55, 0, .0);
 
