@@ -115,8 +115,22 @@ function effects() {
         applyEffects(design_right, 1000);
     }
 }
- 
 
+
+
+ 
+$('html, body').on('swipedown',function(){
+    $('html, body').animate({
+        scrollTop: $("#design").offset().top
+    }, 1500, 'swing');
+
+} );
+$('html, body').on('swipeup',function(){
+    $('html, body').animate({
+        scrollTop: $("#design").offset().top
+    }, 1500, 'swing');
+
+} );
 
 button.onclick = function (e) {
     e.defaultPrevented;
