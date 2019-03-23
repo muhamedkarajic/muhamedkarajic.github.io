@@ -17,16 +17,6 @@ const blink = document.getElementById("blink");
 const skills = document.getElementById("skills");
 
 
-
-
-
-
-
-
-
-
-
-
 window.setInterval(function(){
     blink.style.opacity = 0;
     setTimeout(function(){ 
