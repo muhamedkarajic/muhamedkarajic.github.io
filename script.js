@@ -119,18 +119,18 @@ function effects() {
 
 
  
-$('#bodyMain').on('swipedown',function(){
-    $('html, body').animate({
-        scrollTop: $("#design").offset().top
-    }, 1500, 'swing');
+// $('#bodyMain').on('swipedown',function(){
+//     $('html, body').animate({
+//         scrollTop: $("#design").offset().top
+//     }, 1500, 'swing');
 
-} );
-$('#bodyMain').on('swipeup',function(){
-    $('html, body').animate({
-        scrollTop: $("#design").offset().top
-    }, 1500, 'swing');
+// } );
+// $('#bodyMain').on('swipeup',function(){
+//     $('html, body').animate({
+//         scrollTop: $("#design").offset().top
+//     }, 1500, 'swing');
 
-} );
+// } );
 
 button.onclick = function (e) {
     e.defaultPrevented;
