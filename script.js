@@ -15,6 +15,7 @@ const design_right = document.getElementById("design-right");
 const blink = document.getElementById("blink");
 
 const skills = document.getElementById("skills");
+const img_left = document.getElementById("img-left");
 
 
 window.setInterval(function(){
@@ -62,27 +63,48 @@ const sololean = document.getElementById("sololean");
 const datacamp = document.getElementById("datacamp");
 const pluralsight = document.getElementById("pluralsight");
 
-function applyEffects(obj, ms)
+
+var h2ST;
+var p_leftST;
+var p_rightST;
+
+function applyEffects(obj, objTO,  ms)
 {
-    setTimeout(() => {
+    objTO = setTimeout(() => {
         obj.classList.add("fadeIn");
     }, ms);
 }
 
-
-function removeEffect(obj)
+function removeEffect(obj, objTO)
 {
-    obj.classList.add("fadeOut");
+    clearTimeout(objTO);
+    obj.classList.remove("fadeIn");
 }
+
+var lockAbout = false;
 
 var offset = window.pageYOffset;
 function effects() {
     offset = window.pageYOffset;
-    if(offset > about.offsetTop-window.innerHeight/3)
+    if(!lockAbout && offset > about.offsetTop-window.innerHeight/3 && offset < about.offsetTop+window.innerHeight/3)
     {
-        applyEffects(h2, 100);
-        applyEffects(p_left, 500);
-        applyEffects(p_right, 1000);
+        lockAbout = true;
+        console.log("apply");
+        removeEffect(h2, h2ST);
+        removeEffect(p_left, p_leftST);
+        removeEffect(p_right, p_rightST);
+
+        applyEffects(h2, h2ST, 100);
+        applyEffects(p_left, p_leftST, 500);
+        applyEffects(p_right, p_rightST, 1000);
+    }
+    else if(lockAbout && (offset < about.offsetTop-window.innerHeight || offset > about.offsetTop+window.innerHeight))
+    {
+        lockAbout = false;
+        console.log("remove");
+        removeEffect(h2, h2ST);
+        removeEffect(p_left, p_leftST);
+        removeEffect(p_right, p_rightST);
     }
 
     if(offset > skills.offsetTop-window.innerHeight/1.45)
@@ -103,9 +125,9 @@ function effects() {
         applyEffects(h3, 100);
         applyEffects(design_left, 500);
         applyEffects(design_right, 1000);
+        applyEffects(img_left, 100);
     }
 }
-
 
 
  
@@ -139,6 +161,7 @@ window.onload = function()
     applyEffects(button, 1000);
 
     window.onscroll = effects;
+    effects();
 }
 
 

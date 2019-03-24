@@ -13,6 +13,18 @@
     }
 }
 
+
+@keyframes fadeOut {
+    from { 
+        transform: translate3d(0, 0,0); 
+        opacity: 1;
+    }
+    to { 
+        transform: translate3d(0, -50px,0); 
+        opacity: 0;
+    }
+}
+
 .fadeIn
 {
     animation: fadeIn forwards ease-out .75s;
@@ -20,11 +32,11 @@
 
 .fadeOut
 {
-    animation: fadeIn forwards ease-out .75s reverse;
+    animation: fadeOut forwards ease-out .75s;
 }
 
 
-h1, h2, h3, p, button,.column
+h1, h2, h3, p, button,.column, #img-left
 {
     opacity: 0;
 }
