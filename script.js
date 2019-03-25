@@ -18,6 +18,14 @@ const skills = document.getElementById("skills");
 const img_left = document.getElementById("img-left");
 
 
+
+
+
+const main = document.getElementById("main");
+
+
+
+
 window.setInterval(function(){
     blink.style.opacity = 0;
     setTimeout(function(){ 
@@ -109,16 +117,15 @@ function effects() {
 
     if(offset > skills.offsetTop-window.innerHeight/1.45)
     {
-        applyEffects(html, 100);
-        applyEffects(css, 200);
-        applyEffects(js, 300);
-        applyEffects(cpp, 400);
-        applyEffects(wordpress, 500);
-        applyEffects(sololean, 600);
-        applyEffects(datacamp, 700);
-        applyEffects(pluralsight, 800);
+        applyEffects(html,null, 100);
+        applyEffects(css,null, 200);
+        applyEffects(js,null, 300);
+        applyEffects(cpp,null, 400);
+        applyEffects(wordpress,null, 500);
+        applyEffects(sololean,null, 600);
+        applyEffects(datacamp,null, 700);
+        applyEffects(pluralsight,null, 800);
     }
-
 
     if(offset > design.offsetTop-window.innerHeight/3)
     {
@@ -156,10 +163,10 @@ button.onclick = function (e) {
 
 window.onload = function()
 {
-    applyEffects(h1, 100);
-    applyEffects(p, 500);
-    applyEffects(button, 1000);
-
+    applyEffects(h1,null, 100);
+    applyEffects(p,null, 500);
+    applyEffects(button,null, 1000);
+    main.classList.add('zoomIn');
     window.onscroll = effects;
     effects();
 }

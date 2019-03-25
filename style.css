@@ -25,6 +25,20 @@
     }
 }
 
+
+@keyframes zoomIn {
+    from { 
+        background-size: 100%; 
+    }
+    to { 
+        background-size: 102%; 
+    }
+}
+.zoomIn
+{
+    animation: zoomIn forwards ease-out 4s;
+}
+
 .fadeIn
 {
     animation: fadeIn forwards ease-out .75s;
