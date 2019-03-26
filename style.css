@@ -35,11 +35,11 @@
 {
     animation: fadeOut forwards ease-out .75s;
 }
-/* 
+
 h1, h2, h3, p, button,.column, #img-left
 {
     opacity: 0;
-} */
+}
 
 nav
 {

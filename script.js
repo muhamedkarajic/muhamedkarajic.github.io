@@ -76,18 +76,32 @@ var h2ST;
 var p_leftST;
 var p_rightST;
 
-function applyEffects(obj, objTO,  ms)
+// function applyEffects(obj, objTO,  ms)
+// {
+//     objTO = setTimeout(() => {
+//         obj.classList.add("fadeIn");
+//     }, ms);
+// }
+
+
+function applyEffects(obj, ms)
 {
-    objTO = setTimeout(() => {
+    setTimeout(() => {
         obj.classList.add("fadeIn");
     }, ms);
 }
 
-function removeEffect(obj, objTO)
+function removeEffect(obj)
 {
-    clearTimeout(objTO);
     obj.classList.remove("fadeIn");
 }
+
+
+// function removeEffect(obj, objTO)
+// {
+//     clearTimeout(objTO);
+//     obj.classList.remove("fadeIn");
+// }
 
 var lockAbout = false;
 
@@ -162,9 +176,9 @@ button.onclick = function (e) {
 
 window.onload = function()
 {
-    applyEffects(h1,null, 100);
-    applyEffects(p,null, 500);
-    applyEffects(button,null, 1000);
+    applyEffects(h1, 100);
+    applyEffects(p, 500);
+    applyEffects(button, 1000);
     window.onscroll = effects;
     effects();
 }
