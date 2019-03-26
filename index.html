@@ -147,7 +147,10 @@
                 applyEffects(h3, 100);
                 applyEffects(design_left, 500);
                 applyEffects(design_right, 1000);
-                applyEffects(img_left, 100);
+                // applyEffects(img_left, 100);
+                setTimeout(() => {
+                    img_left.classList.add("fade");
+                }, 250);
             }
         }
     });

@@ -12,6 +12,17 @@
         opacity: 1;
     }
 }
+@keyframes fade {
+    from { 
+        opacity: 0;
+    }
+    to { 
+        opacity: 1;
+    }
+}
+
+
+
 
 
 @keyframes fadeOut {
@@ -24,7 +35,10 @@
         opacity: 0;
     }
 }
-
+.fade
+{
+    animation: fade forwards ease-out 1.25s;
+}
 
 .fadeIn
 {
@@ -407,6 +421,7 @@ hr
     position: absolute;
     height: 100%;
     right: 0;
+    top: 0;
 }
 
 #newSection
