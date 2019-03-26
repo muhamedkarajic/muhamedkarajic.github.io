@@ -48,12 +48,11 @@
 {
     animation: fadeOut forwards ease-out .75s;
 }
-
-
+/* 
 h1, h2, h3, p, button,.column, #img-left
 {
     opacity: 0;
-}
+} */
 
 nav
 {
@@ -125,7 +124,7 @@ main
     background-color: hsl(253, 23%, 15%); /* Old browsers */
     
     display: block; /* IE FIX */
-    background: url(img/2.jpg) no-repeat center center fixed;
+    background: url(img/2.jpg) no-repeat center center;
     background-size: cover;
     
 
@@ -254,7 +253,7 @@ button:focus
 #left
 {
     width: 40%;
-    position: fixed;
+    position: absolute;
     bottom:0;
     left:0;
 }
@@ -310,7 +309,7 @@ hr
 
 #about
 {
-    background: url(img/1.jpg) no-repeat center center fixed;
+    background: url(img/1.jpg) no-repeat center center;
     background-size: cover;
     background-color: hsl(253, 23%, 15%); /* Old browsers */
     width: 100%;

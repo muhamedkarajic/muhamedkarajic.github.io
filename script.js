@@ -159,7 +159,6 @@ button.onclick = function (e) {
     }, 1500, 'swing');
 };
 
-// var sections = ["#main", "#about", "#design"];
 
 window.onload = function()
 {
@@ -170,13 +169,3 @@ window.onload = function()
     window.onscroll = effects;
     effects();
 }
-
-
-// var cSection = "#main";
-// var scrolling = false;
-// function getNextSection()
-// {
-//     for(var i=0; i<sections.length; i++)
-//         if(cSection === sections[i])
-//             return sections[i+1];
-// }
