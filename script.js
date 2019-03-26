@@ -165,7 +165,6 @@ window.onload = function()
     applyEffects(h1,null, 100);
     applyEffects(p,null, 500);
     applyEffects(button,null, 1000);
-    main.classList.add('zoomIn');
     window.onscroll = effects;
     effects();
 }
