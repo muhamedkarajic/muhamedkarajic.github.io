@@ -20,11 +20,7 @@
         opacity: 1;
     }
 }
-
-
-
-
-
+ 
 @keyframes fadeOut {
     from { 
         transform: translate3d(0, 0,0); 
@@ -262,7 +258,7 @@ button:focus
     -khtml-user-select: none;
     -moz-user-select: none;
     -o-user-select: none;
-    user-select: none;
+    /* user-select: none; */
 }
 
 #skills
