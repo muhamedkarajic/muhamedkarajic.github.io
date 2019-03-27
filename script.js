@@ -41,6 +41,12 @@ var myFullpage = new fullpage('#fullpage', {
             else
                 halfViews.push(this);
         }
+        else
+        {
+            for (let j = 0; j < halfViews.length; j++)
+                    removeEffects(halfViews[j].getElementsByClassName("animate"));
+            halfViews = [];
+        }
     },
 
     onLeave: function(index, nextIndex, direction){
