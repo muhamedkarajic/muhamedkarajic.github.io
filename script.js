@@ -27,7 +27,7 @@ var myFullpage = new fullpage('#fullpage', {
     v2compatible: true,
     afterLoad: function(anchorLink, index){
         if(index != beforeIndex){//ima bug sa halfView ako ode na jedan pa se vrati na početni pa ode opet na isti halfView
-            applyEffects(this.getElementsByClassName("animate"), 1000);
+            applyEffects(this.getElementsByClassName("animate"), 750);
             if(!this.classList.contains('fp-auto-height'))
             {
                 for (let j = 0; j < halfViews.length; j++)
