@@ -19,11 +19,28 @@
     }
 }
 @keyframes fade {
-    from { 
+    0% { 
+        opacity: 1;
+    }
+    15%
+    {
+        opacity: 1;
+    }
+    25% { 
         opacity: 0;
     }
-    to { 
+    75%{
+        opacity: 0;
+
+    }
+    90%
+    {
         opacity: 1;
+    }
+    100%
+    {
+        opacity: 1;
+
     }
 }
  
@@ -39,7 +56,7 @@
 }
 .fade
 {
-    animation: fade forwards ease-out 1.25s;
+    animation: fade infinite ease-out 2s;
 }
 
 .fadeIn

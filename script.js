@@ -48,16 +48,5 @@ var myFullpage = new fullpage('#fullpage', {
                     removeEffects(fp_auto_height[j].getElementsByClassName("animate"));
             fp_auto_height = [];
         }
-    },
-
-    onLeave: function(index, nextIndex, direction){
-        
     }
 });
-
-window.setInterval(function() {
-    blink.style.opacity = 0;
-    setTimeout(function(){ 
-        blink.style.opacity = 1;
-    }, 500);
-}, 1000);
