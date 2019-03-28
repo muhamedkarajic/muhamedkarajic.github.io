@@ -46,7 +46,7 @@
     animation: fadeOut forwards ease-out .75s;
 }
 
-h1, h2, h3, p, button,.column, #img-left
+h1, h2, h3, p, button,.column img, #img-left
 {
     opacity: 0;
 }
@@ -273,9 +273,17 @@ button:focus
 
 .column {
     display: inline-block;
+    margin: 17.5px -4px 17.5px 0;
     width: 12.5%;
     height: 75px;
-    margin: 17.5px -4px 17.5px 0;
+    
+}
+
+.column img
+{
+    height: 100%;
+    display: block;
+    margin: auto;
 }
 
 hr

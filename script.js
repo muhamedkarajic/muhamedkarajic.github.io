@@ -17,35 +17,35 @@ function applyEffects(x, ms) {
 function removeEffects(x) {
     for (let i = 0; i < x.length; i++)
         removeEffect(x[i]);
-    }
+}
 
-var before = 0;
-var beforeIndex = -1;
-var halfViews = [];
+var last = 0;
+var lastIndex = -1;
+var fp_auto_height = [];
 
 var myFullpage = new fullpage('#fullpage', {
     v2compatible: true,
     afterLoad: function(anchorLink, index){
-        if(index != beforeIndex){//ima bug sa halfView ako ode na jedan pa se vrati na početni pa ode opet na isti halfView
+        if(index != lastIndex){
             applyEffects(this.getElementsByClassName("animate"), 750);
             if(!this.classList.contains('fp-auto-height'))
             {
-                for (let j = 0; j < halfViews.length; j++)
-                    removeEffects(halfViews[j].getElementsByClassName("animate"));
-                halfViews = [];
-                if(before != 0)
-                    removeEffects(before.getElementsByClassName("animate"));
-                before = this;
-                beforeIndex = index;
+                for (let j = 0; j < fp_auto_height.length; j++)
+                    removeEffects(fp_auto_height[j].getElementsByClassName("animate"));
+                fp_auto_height = [];
+                if(last != 0)
+                    removeEffects(last.getElementsByClassName("animate"));
+                last = this;
+                lastIndex = index;
             }
             else
-                halfViews.push(this);
+                fp_auto_height.push(this);
         }
-        else
+        else if(fp_auto_height.length > 0)
         {
-            for (let j = 0; j < halfViews.length; j++)
-                    removeEffects(halfViews[j].getElementsByClassName("animate"));
-            halfViews = [];
+            for (let j = 0; j < fp_auto_height.length; j++)
+                    removeEffects(fp_auto_height[j].getElementsByClassName("animate"));
+            fp_auto_height = [];
         }
     },
 
