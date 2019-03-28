@@ -50,3 +50,6 @@ var myFullpage = new fullpage('#fullpage', {
         }
     }
 });
+
+
+// document.getElementById('fp-nav').classList.add('fadeOut');
