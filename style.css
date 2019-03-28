@@ -66,18 +66,16 @@
 {
     animation: fadeOut forwards ease-out .75s 5s;
 }
-/* 
-#fp-nav
+
+
+
+.fp-right
 {
-    opacity: .5;
-    transition: opacity .5s;
+    right: 3.76% !important;
 }
 
 
-#fp-nav:hover
-{
-    opacity: 1;
-} */
+
 h1, h2, h3, p, button,.column img
 {
     opacity: 0;
@@ -151,7 +149,7 @@ h1, h2, h3, h4, h5, h6
 main
 {
     background-color: hsl(253, 23%, 15%); /* Old browsers */
-    
+    position: relative;
     display: block; /* IE FIX */
     background: url(img/2.jpg) no-repeat center center;
 
@@ -332,7 +330,7 @@ hr
     }
     main section
     {
-        
+        /* width: 90%; */
     }
 
     #right, #left
