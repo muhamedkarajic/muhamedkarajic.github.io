@@ -25,6 +25,7 @@ var fp_auto_height = [];
 
 var myFullpage = new fullpage('#fullpage', {
     v2compatible: true,
+    navigation: true,
     afterLoad: function(anchorLink, index){
         if(index != lastIndex){
             applyEffects(this.getElementsByClassName("animate"), 750);

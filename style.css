@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css?family=Muli:900');
 
 
+
+#fp-nav ul li a span
+{
+    background-color: rgba(255, 255, 255, 0.849);
+}
+
 @keyframes fadeIn {
     from { 
         transform: translate3d(0, 50px,0); 
@@ -237,7 +243,7 @@ button:focus
 }
 #right
 {
-    width: 40%;
+    width: 33%;
     position: absolute;
     right:0;
     top:0;
