@@ -52,7 +52,7 @@
     animation: fadeOut forwards ease-out .75s;
 }
 
-h1, h2, h3, p, button,.column img, #img-left
+h1, h2, h3, p, button,.column img
 {
     opacity: 0;
 }
@@ -469,6 +469,8 @@ hr
 {
     position: absolute;
     padding-left: 7%;
+    width: 30%;
+    height: auto;
     top:50%;
     transform: translate3d(0, -50%, 0);
     margin-right: 7%;
