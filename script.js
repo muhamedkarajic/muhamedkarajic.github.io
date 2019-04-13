@@ -1,5 +1,5 @@
 function applyEffect(x, ms) {
-    setTimeout(function() {
+    setTimeout(function () {
         x.classList.add('fadeIn');
     }, ms);
 }
@@ -11,7 +11,7 @@ function removeEffect(obj) {
 function applyEffects(x, ms) {
     let speed = ms / x.length;
     for (let i = 0; i < x.length; i++)
-        applyEffect(x[i], (i)*speed);
+        applyEffect(x[i], (i) * speed);
 }
 
 function removeEffects(x) {
@@ -26,15 +26,14 @@ var fp_auto_height = [];
 var myFullpage = new fullpage('#fullpage', {
     v2compatible: true,
     navigation: true,
-    afterLoad: function(anchorLink, index){
-        if(index != lastIndex){
+    afterLoad: function (anchorLink, index) {
+        if (index != lastIndex) {
             applyEffects(this.getElementsByClassName("animate"), 750);
-            if(!this.classList.contains('fp-auto-height'))
-            {
+            if (!this.classList.contains('fp-auto-height')) {
                 for (let j = 0; j < fp_auto_height.length; j++)
                     removeEffects(fp_auto_height[j].getElementsByClassName("animate"));
                 fp_auto_height = [];
-                if(last != 0)
+                if (last != 0)
                     removeEffects(last.getElementsByClassName("animate"));
                 last = this;
                 lastIndex = index;
@@ -42,10 +41,9 @@ var myFullpage = new fullpage('#fullpage', {
             else
                 fp_auto_height.push(this);
         }
-        else if(fp_auto_height.length > 0)
-        {
+        else if (fp_auto_height.length > 0) {
             for (let j = 0; j < fp_auto_height.length; j++)
-                    removeEffects(fp_auto_height[j].getElementsByClassName("animate"));
+                removeEffects(fp_auto_height[j].getElementsByClassName("animate"));
             fp_auto_height = [];
         }
     }
