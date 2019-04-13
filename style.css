@@ -10,11 +10,11 @@
 
 @keyframes fadeIn {
     from { 
-        transform: translate3d(0, 50px,0); 
+        transform: translate3d(0, 50px, 0); 
         opacity: 0;
     }
     to { 
-        transform: translate3d(0, 0px,0); 
+        transform: translate3d(0px, 0px, 0px); 
         opacity: 1;
     }
 }
@@ -288,6 +288,7 @@ button:focus
 
 #skills
 {
+
     padding: 50px 7%;
     top: 0;
     position: relative;
@@ -297,6 +298,8 @@ button:focus
 }
 
 .column {
+    perspective: 1000px;
+
     display: inline-block;
     margin: 17.5px -4px 17.5px 0;
     width: 12.5%;
@@ -336,6 +339,7 @@ hr
 
 #about
 {
+
     background: url(img/1.jpg) no-repeat center center;
     background-size: cover;
     background-color: hsl(253, 23%, 15%); /* Old browsers */
@@ -368,6 +372,8 @@ hr
 
 #about section
 {
+    perspective: 1000px;
+
     position: absolute;
     z-index: 1;
     width: 50%;
@@ -497,6 +503,8 @@ hr
 
 #design section
 {
+    perspective: 1000px;
+
     position: absolute;
     z-index: 1;
     right: 7%;
@@ -525,10 +533,14 @@ hr
 }
 #img-bottom
 {
+
     position: absolute;
     bottom:0%;
 }
-
+#img-left
+{
+    perspective: 1000px;
+}
 
 
 
