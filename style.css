@@ -103,8 +103,6 @@ html, body {
     height: 100%;
     font-family: 'Ubuntu', sans-serif;
     scrollbar-width: none;
-    /* text-shadow: rgba(173, 129, 250, .35) 1px 1px 10px; */
-    /* text-shadow: rgba(9, 66, 253, 0.568) 1px 1px 7px; */
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -26,6 +26,7 @@ var fp_auto_height = [];
 var myFullpage = new fullpage('#fullpage', {
     v2compatible: true,
     navigation: true,
+    licenseKey: 'bobwH@p8',
     afterLoad: function (anchorLink, index) {
         if (index != lastIndex) {
             applyEffects(this.getElementsByClassName("animate"), 750);
@@ -48,6 +49,3 @@ var myFullpage = new fullpage('#fullpage', {
         }
     }
 });
-
-
-// document.getElementById('fp-nav').classList.add('fadeOut');
