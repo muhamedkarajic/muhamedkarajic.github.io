@@ -1,17 +1,17 @@
 function applyEffect(x, ms) {
     setTimeout(function () {
-        x.classList.add('fadeIn');
-    }, ms);
+        x.classList.add(x.dataset.animation);
+    }, ms + parseInt(x.dataset.delay));
 }
 
 function removeEffect(obj) {
-    obj.classList.remove("fadeIn");
+    obj.classList.remove(obj.dataset.animation);
 }
 
 function applyEffects(x, ms) {
     let speed = ms / x.length;
     for (let i = 0; i < x.length; i++)
-        applyEffect(x[i], (i) * speed);
+        applyEffect(x[i], i * speed);
 }
 
 function removeEffects(x) {

@@ -1,8 +1,48 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
-@import url('https://fonts.googleapis.com/css?family=Muli:900');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900&display=swap');
+
 #fp-nav ul li a span {
     background-color: rgba(255, 255, 255, 0.849);
 }
+
+#title
+{
+    display: inline-block;
+}
+
+
+@keyframes growIn {
+    from {
+        transform: scale3d(0, 1, 1);
+        opacity: 0;
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+        opacity: 1;
+    }
+}
+
+#title-underline
+{
+    width: 20%;
+    opacity: 0;
+    display: block;
+    background-color: #23e8fd;
+    height: 8px;
+    transform-origin: left;
+    
+}
+@keyframes leftIn {
+    from {
+        transform: translate3d(-50px,0px, 0);
+        opacity: 0;
+    }
+    to {
+        transform: translate3d(0px, 0px, 0px);
+        opacity: 1;
+
+    }
+}
+
 
 @keyframes fadeIn {
     from {
@@ -53,6 +93,15 @@
     animation: fadeIn forwards ease-out .75s;
 }
 
+.growIn {
+    animation: growIn forwards ease-out .75s;
+}
+
+.leftIn {
+    animation: leftIn forwards ease-out .75s;
+}
+
+
 .fadeOut {
     animation: fadeOut forwards ease-out .75s 5s;
 }
@@ -101,12 +150,14 @@ nav a:hover {
 
 html, body {
     height: 100%;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Lato', sans-serif;
     scrollbar-width: none;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Muli', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
 }
 
 #background-image {
@@ -122,7 +173,7 @@ main {
     position: relative;
     display: block;
     /* IE FIX */
-    background: url(img/2.jpg) no-repeat center center;
+    background: url(https://media.licdn.com/dms/image/C5622AQGN-0UkDOwXtQ/feedshare-shrink_8192/0?e=1567641600&v=beta&t=9jPqoF_IjJPDv0_bfvl_uH56VMMj-tRbDhnuLehRKnw) no-repeat center center;
     min-height: 100%;
 }
 
@@ -177,6 +228,11 @@ main section p {
 }
 
 @media only screen and (max-width: 650px) {
+    #title-underline
+    {
+        width: 65%;
+    }
+
     h1, h2, h3 {
         word-wrap: break-word;
     }
@@ -480,4 +536,30 @@ hr {
         top: 50%;
         transform: translate3d(50%, -50%, 0);
     }
+}
+
+
+.test123
+{
+    margin: 11px;
+    background-color: #23e8fd;
+    width: 400px;
+    z-index: -1;
+    transform-origin: right;
+
+    height: 3px;
+}
+
+.abBtmRight
+{
+    transform-origin: right;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 75%;
+    right: -20px;
+}
+
+.animate
+{
+    opacity: 0;
 }
