@@ -1,14 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,900&display=swap');
-
 #fp-nav ul li a span {
     background-color: rgba(255, 255, 255, 0.849);
 }
 
-#title
-{
+#title {
     display: inline-block;
 }
-
 
 @keyframes growIn {
     from {
@@ -21,30 +18,38 @@
     }
 }
 
-#title-underline
-{
+#title-underline {
     width: 20%;
     opacity: 0;
     display: block;
     background-color: #23e8fd;
     height: 8px;
     transform-origin: left;
-    
 }
-@keyframes leftIn {
+
+@keyframes rightIn {
     from {
-        transform: translate3d(-50px,0px, 0);
+        transform: translate3d(50px, 0px, 0);
         opacity: 0;
     }
     to {
         transform: translate3d(0px, 0px, 0px);
         opacity: 1;
-
     }
 }
 
+@keyframes leftIn {
+    from {
+        transform: translate3d(-50px, 0px, 0);
+        opacity: 0;
+    }
+    to {
+        transform: translate3d(0px, 0px, 0px);
+        opacity: 1;
+    }
+}
 
-@keyframes fadeIn {
+@keyframes bottomIn {
     from {
         transform: translate3d(0, 50px, 0);
         opacity: 0;
@@ -54,6 +59,18 @@
         opacity: 1;
     }
 }
+
+@keyframes topIn {
+    from {
+        transform: translate3d(0, -50px, 0);
+        opacity: 0;
+    }
+    to {
+        transform: translate3d(0px, 0px, 0px);
+        opacity: 1;
+    }
+}
+
 
 @keyframes fade {
     0% {
@@ -89,8 +106,12 @@
     animation: fade infinite ease-out 2s;
 }
 
-.fadeIn {
-    animation: fadeIn forwards ease-out .75s;
+.bottomIn {
+    animation: bottomIn forwards ease-out .75s;
+}
+
+.topIn {
+    animation: topIn forwards ease-out .75s;
 }
 
 .growIn {
@@ -101,13 +122,12 @@
     animation: leftIn forwards ease-out .75s;
 }
 
+.rightIn {
+    animation: rightIn forwards ease-out .75s;
+}
 
 .fadeOut {
     animation: fadeOut forwards ease-out .75s 5s;
-}
-
-h1, h2, h3, p, button, .column img {
-    opacity: 0;
 }
 
 nav {
@@ -152,12 +172,13 @@ html, body {
     height: 100%;
     font-family: 'Lato', sans-serif;
     scrollbar-width: none;
-
+    background-color: rgb(32, 32, 32);
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Lato', sans-serif;
     font-weight: 900;
+    opacity: 1;
 }
 
 #background-image {
@@ -173,8 +194,9 @@ main {
     position: relative;
     display: block;
     /* IE FIX */
-    background: url(https://media.licdn.com/dms/image/C5622AQGN-0UkDOwXtQ/feedshare-shrink_8192/0?e=1567641600&v=beta&t=9jPqoF_IjJPDv0_bfvl_uH56VMMj-tRbDhnuLehRKnw) no-repeat center center;
+    background: url(img/2.jpg) no-repeat center center;
     min-height: 100%;
+    perspective: 1000px;
 }
 
 main::before {
@@ -200,12 +222,11 @@ main::before {
 }
 
 main section {
-    perspective: 1000px;
     width: 75%;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0px);
 }
 
 main section h1 {
@@ -228,11 +249,9 @@ main section p {
 }
 
 @media only screen and (max-width: 650px) {
-    #title-underline
-    {
+    #title-underline {
         width: 65%;
     }
-
     h1, h2, h3 {
         word-wrap: break-word;
     }
@@ -318,20 +337,30 @@ button:focus {
     height: auto;
     width: 100%;
     background: rgb(32, 32, 32);
+    perspective: 1000px;
 }
 
 .column {
-    perspective: 1000px;
     display: inline-block;
     margin: 17.5px -4px 17.5px 0;
     width: 12.5%;
     height: 75px;
+    text-align: center;
 }
 
 .column img {
     height: 100%;
     display: block;
     margin: auto;
+    opacity: 1;
+}
+
+.column p
+{
+    color: white;
+    opacity: 1;
+    margin-top: 15px;
+    margin-bottom: 17.5px;
 }
 
 hr {
@@ -362,6 +391,7 @@ hr {
     height: auto;
     position: relative;
     z-index: 50;
+    perspective: 1000px;
 }
 
 #about::before {
@@ -388,13 +418,12 @@ hr {
 }
 
 #about section {
-    perspective: 1000px;
     position: absolute;
     z-index: 1;
     width: 50%;
     top: 50%;
     margin-left: 7%;
-    transform: translate3d(0%, -50%, 0);
+    transform: translate3d(0%, -50%, 0px);
 }
 
 #about section h2 {
@@ -477,6 +506,7 @@ hr {
     width: 100%;
     height: 100%;
     position: relative;
+    perspective: 1000px;
 }
 
 #design img {
@@ -494,7 +524,6 @@ hr {
 }
 
 #design section {
-    perspective: 1000px;
     position: absolute;
     z-index: 1;
     right: 7%;
@@ -538,20 +567,16 @@ hr {
     }
 }
 
-
-.test123
-{
+.test123 {
     margin: 11px;
     background-color: #23e8fd;
     width: 400px;
     z-index: -1;
     transform-origin: right;
-
     height: 3px;
 }
 
-.abBtmRight
-{
+.abBtmRight {
     transform-origin: right;
     transform: rotate(-45deg);
     position: absolute;
@@ -559,7 +584,11 @@ hr {
     right: -20px;
 }
 
-.animate
-{
+.animate {
     opacity: 0;
+}
+
+#fp-nav ul li a
+{
+    padding: 9px;
 }
