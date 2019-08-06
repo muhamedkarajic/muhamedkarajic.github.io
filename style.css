@@ -2,6 +2,9 @@
 #fp-nav ul li a span {
     background-color: rgba(255, 255, 255, 0.849);
 }
+::-webkit-scrollbar { 
+    display: none; 
+}
 
 #title {
     display: inline-block;
@@ -20,7 +23,6 @@
 
 #title-underline {
     width: 20%;
-    opacity: 0;
     display: block;
     background-color: #23e8fd;
     height: 8px;
@@ -567,27 +569,6 @@ button:focus {
         top: 50%;
         transform: translate3d(50%, -50%, 0);
     }
-}
-
-.test123 {
-    margin: 11px;
-    background-color: #23e8fd;
-    width: 400px;
-    z-index: -1;
-    transform-origin: right;
-    height: 3px;
-}
-
-.abBtmRight {
-    transform-origin: right;
-    transform: rotate(-45deg);
-    position: absolute;
-    top: 75%;
-    right: -20px;
-}
-
-.animate {
-    opacity: 0;
 }
 
 #fp-nav ul li a
