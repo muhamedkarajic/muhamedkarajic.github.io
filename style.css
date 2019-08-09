@@ -2,9 +2,6 @@
 #fp-nav ul li a span {
     background-color: rgba(255, 255, 255, 0.849);
 }
-::-webkit-scrollbar { 
-    display: none; 
-}
 
 #title {
     display: inline-block;
@@ -23,6 +20,7 @@
 
 #title-underline {
     width: 20%;
+    opacity: 0;
     display: block;
     background-color: #23e8fd;
     height: 8px;
@@ -377,9 +375,6 @@ button:focus {
     .column {
         width: 25%;
     }
-    main section {
-        /* width: 90%; */
-    }
     #right, #left {
         visibility: hidden;
     }
@@ -392,7 +387,6 @@ button:focus {
     /* Old browsers */
     width: 100%;
     min-height: 100%;
-    height: auto;
     position: relative;
     z-index: 50;
     perspective: 1000px;
@@ -509,6 +503,7 @@ button:focus {
     background: rgb(32, 32, 32);
     width: 100%;
     min-height: 100%;
+
     position: relative;
     perspective: 1000px;
 }
@@ -569,6 +564,27 @@ button:focus {
         top: 50%;
         transform: translate3d(50%, -50%, 0);
     }
+}
+
+.test123 {
+    margin: 11px;
+    background-color: #23e8fd;
+    width: 400px;
+    z-index: -1;
+    transform-origin: right;
+    height: 3px;
+}
+
+.abBtmRight {
+    transform-origin: right;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 75%;
+    right: -20px;
+}
+
+.animate {
+    opacity: 0;
 }
 
 #fp-nav ul li a
