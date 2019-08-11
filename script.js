@@ -1,14 +1,17 @@
+var timeOuts = new Array();
+
 function applyEffect(x, ms) {
     let delay = x.dataset.delay;
-    
-    if(delay == 0)
-    {
+
+    if (delay == 0) {
         delay = ms;
     }
 
-    setTimeout(function () {
-        x.classList.add(x.dataset.animation);
-    }, parseInt(delay));
+    timeOuts.push(
+        setTimeout(function () {
+            x.classList.add(x.dataset.animation);
+        }, parseInt(delay))
+    );
 }
 
 function removeEffect(obj) {
@@ -36,6 +39,8 @@ var myFullpage = new fullpage('#fullpage', {
     licenseKey: 'bobwH@p8',
     afterLoad: function (anchorLink, index) {
         if (index != lastIndex) {
+            for (let j = 0; j < timeOuts.length; j++)
+                clearTimeout(timeOuts[j]); 
             applyEffects(this.getElementsByClassName("animate"), 750);
             if (!this.classList.contains('fp-auto-height')) {
                 for (let j = 0; j < fp_auto_height.length; j++)
