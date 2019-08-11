@@ -1,7 +1,14 @@
 function applyEffect(x, ms) {
+    let delay = x.dataset.delay;
+    
+    if(delay == 0)
+    {
+        delay = ms;
+    }
+
     setTimeout(function () {
         x.classList.add(x.dataset.animation);
-    }, ms + parseInt(x.dataset.delay));
+    }, parseInt(delay));
 }
 
 function removeEffect(obj) {
