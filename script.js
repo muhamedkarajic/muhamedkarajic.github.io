@@ -33,15 +33,20 @@ function removeEffects(x) {
 var last = 0;
 var lastIndex = -1;
 var fp_auto_height = [];
-
+var animationsApplied = false;
 var myFullpage = new fullpage('#fullpage', {
     v2compatible: true,
     navigation: true,
     licenseKey: 'bobwH@p8',
+    onLeave: function (anchorLink, index) {
+        if (index != lastIndex) {
+            applyEffects(document.getElementsByClassName("section")[index-1].getElementsByClassName("animate"), 1000);
+        }
+        animationsApplied = true;
+    },
+
     afterLoad: function (anchorLink, index) {
         if (index != lastIndex) {
-
-            applyEffects(this.getElementsByClassName("animate"), 750);
             if (!this.classList.contains('fp-auto-height')) {
                 for (let j = 0; j < fp_auto_height.length; j++)
                     removeEffects(fp_auto_height[j].getElementsByClassName("animate"));
@@ -53,11 +58,17 @@ var myFullpage = new fullpage('#fullpage', {
             }
             else
                 fp_auto_height.push(this);
+        
         }
         else if (fp_auto_height.length > 0) {
             for (let j = 0; j < fp_auto_height.length; j++)
                 removeEffects(fp_auto_height[j].getElementsByClassName("animate"));
             fp_auto_height = [];
         }
+    
     }
+});
+
+window.addEventListener("load", function() {
+    applyEffects(document.getElementsByClassName("section")[0].getElementsByClassName("animate"), 1000);
 });
