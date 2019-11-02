@@ -5,11 +5,6 @@ var fp_auto_height = [];
 var fp_auto_height_string = 'fp-auto-height';
 var section = document.getElementsByClassName("section");
 
-function elementContaints(element, value)
-{
-    return element.classList.contains(value);
-}
-
 function applyEffect(x, ms) {
     let delay = x.dataset.delay;
     if (delay == 0) {
