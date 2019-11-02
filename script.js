@@ -27,12 +27,10 @@ function removeEffect(obj) {
 }
 
 function applyEffects(x, ms, element) {
-    if(!element.classList.contains(fp_auto_height_string))
-    {
-        for (let j = 0; j < timeOuts.length; j++)
+
+    for (let j = 0; j < timeOuts.length; j++)
         clearTimeout(timeOuts[j]);
-        timeOuts = [];
-    }
+    timeOuts = [];
     let speed = ms / x.length;
     for (let i = 0; i < x.length; i++)
         applyEffect(x[i], i * speed);
@@ -50,13 +48,14 @@ var myFullpage = new fullpage('#fullpage', {
     licenseKey: 'bobwH@p8',
     onLeave: function (anchorLink, index) {
         if (index != lastIndex) {
-            applyEffects(section[index-1].getElementsByClassName("animate"), 1000, section[index-1]);
+            console.log(section[index-1]);
+            applyEffects(section[index-1].getElementsByClassName("animate"), 1000);
         }
     },
 
     afterLoad: function (anchorLink, index) {
         if (index != lastIndex) {
-            if (!this.classList.contains(fp_auto_height_string) || (index + 1 != lastIndex && index - 1 != lastIndex)) {
+            if (!this.classList.contains(fp_auto_height_string)) {
                 for (let j = 0; j < fp_auto_height.length; j++)
                     removeEffects(fp_auto_height[j].getElementsByClassName("animate"));
                 fp_auto_height = [];
@@ -78,6 +77,6 @@ var myFullpage = new fullpage('#fullpage', {
 
 window.addEventListener("load", function() {
     setTimeout(function () {
-        applyEffects(document.getElementsByClassName("section")[0].getElementsByClassName("animate"), 1000, section[1]);
+        applyEffects(document.getElementsByClassName("section")[0].getElementsByClassName("animate"), 1000);
     }, parseInt(500))
 });
