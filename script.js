@@ -50,7 +50,7 @@ var myFullpage = new fullpage('#fullpage', {
         if (!currentSection.classList.contains('fp-auto-height')) {
             for (let i = 0; i < sections.length; i++) {
                 const section = sections[i];
-                if (i != index - 1)
+                if (section != currentSection)
                     removeEffects(section.getElementsByClassName("animate"));
             }
             for (let j = 0; j < fp_auto_height.length; j++)
