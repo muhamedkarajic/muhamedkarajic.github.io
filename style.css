@@ -285,14 +285,16 @@ main section p {
     }
 }
 
-input, button, submit {
+input, .btn, submit {
     border: none;
 }
 
-button {
+.btn {
     transform-origin: left center;
     color: white;
     background-color: transparent;
+    text-decoration: none;
+    display: inline-block;
     border: white 3px solid;
     padding: 9px 32px;
     font-size: 16px;
@@ -301,7 +303,7 @@ button {
     transition: background-color .2s ease-out, color .2s ease-out, border .2s ease-out;
 }
 
-button:hover {
+.btn:hover {
     background-color: white;
     /* Old browsers */
     cursor: pointer;
@@ -310,7 +312,7 @@ button:hover {
     border-color: white;
 }
 
-button:focus {
+.btn:focus {
     background-color: white;
     /* Old browsers */
     color: hsl(253, 23%, 15%);
