@@ -37,6 +37,7 @@ function removeEffects(x) {
 
 var myFullpage = new fullpage('#fullpage', {
     v2compatible: true,
+    scrollOverflow:true,
     navigation: true,
     licenseKey: 'bobwH@p8',
     onLeave: function (anchorLink, index) {

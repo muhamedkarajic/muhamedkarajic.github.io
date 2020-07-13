@@ -210,17 +210,6 @@ h1, h2, h3, h4, h5, h6 {
     position: fixed;
 }
 
-main {
-    background-color: hsl(253, 23%, 15%);
-    /* Old browsers */
-    position: relative;
-    display: block;
-    /* IE FIX */
-    background: url(img/2.jpg) no-repeat center center;
-    min-height: 100%;
-    perspective: 1000px;
-}
-
 main::before {
     content: '';
     position: absolute;
@@ -243,12 +232,19 @@ main::before {
     /* IE6-9 fallback on horizontal gradient */
 }
 
-main section {
-    width: 75%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0px);
+
+main {
+    min-height: 100%;
+    padding: 15% 20%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    perspective: 1000px;
+    position: relative;
+    display: block;
+    background: url(img/2.jpg) no-repeat center center;
+    background-color: hsl(253, 23%, 15%);
 }
 
 main section h1 {
@@ -408,12 +404,16 @@ input, .btn, submit {
     background: url(img/1.jpg) no-repeat center center;
     background-size: cover;
     background-color: hsl(253, 23%, 15%);
-    /* Old browsers */
-    width: 100%;
     min-height: 100%;
+
+    padding: 0 15%; 
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    perspective: 1000px;
     position: relative;
     z-index: 50;
-    perspective: 1000px;
 }
 
 #about::before {
@@ -439,14 +439,14 @@ input, .btn, submit {
     /* IE6-9 fallback on horizontal gradient */
 }
 
-#about section {
+/* #about section {
     position: absolute;
     z-index: 1;
     width: 50%;
     top: 50%;
     margin-left: 7%;
     transform: translate3d(0%, -50%, 0px);
-}
+} */
 
 #about section h2 {
     font-size: 3em;
