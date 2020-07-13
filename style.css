@@ -409,7 +409,7 @@ input, .btn, submit {
     padding: 0 15%; 
     justify-content: center;
     display: flex;
-    align-items: center;
+    align-items: left;
     flex-direction: column;
     perspective: 1000px;
     position: relative;
@@ -439,14 +439,11 @@ input, .btn, submit {
     /* IE6-9 fallback on horizontal gradient */
 }
 
-/* #about section {
-    position: absolute;
+#about section {
     z-index: 1;
-    width: 50%;
-    top: 50%;
-    margin-left: 7%;
-    transform: translate3d(0%, -50%, 0px);
-} */
+    width: 55%;
+    padding: 100px 0;
+}
 
 #about section h2 {
     font-size: 3em;
@@ -467,7 +464,9 @@ input, .btn, submit {
         visibility: hidden;
     }
     #about section {
+        width: auto;
         margin-left: 0%;
+        left: auto;
     }
 }
 
