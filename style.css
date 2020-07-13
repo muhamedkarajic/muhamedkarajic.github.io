@@ -467,9 +467,6 @@ input, .btn, submit {
         visibility: hidden;
     }
     #about section {
-        width: 70%;
-        right: 50%;
-        transform: translate3d(50%, -50%, 0);
         margin-left: 0%;
     }
 }
