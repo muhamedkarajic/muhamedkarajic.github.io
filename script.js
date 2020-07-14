@@ -71,7 +71,7 @@ var myFullpage = new fullpage('#fullpage', {
 
 window.addEventListener("load", function () {
     setTimeout(function () {
-        applyEffects(last.getElementsByClassName("animate"), 1000);
+        applyEffects(last.getElementsByClassName("animate"), 750);
     }, 500)
 });
 
