@@ -2,7 +2,7 @@ $('#fullpage').fullpage({
     v2compatible: true,
     scrollOverflow: true,
     css3:true,
-    scrollingSpeed: 500,
+    scrollingSpeed: 350,
     navigation: true,
     licenseKey: 'bobwH@p8',
     onLeave: function (anchorLink, index) {
@@ -11,7 +11,7 @@ $('#fullpage').fullpage({
             clearTimeout(timeOut);
         });
         console.log("section", newSection);
-        applyEffects(newSection.getElementsByClassName("animate"), 1000);
+        applyEffects(newSection.getElementsByClassName("animate"), 350);
         
     },
 
@@ -86,7 +86,7 @@ function removeEffects(x) {
 
 window.addEventListener("load", function () {
     setTimeout(function () {
-        applyEffects(last.getElementsByClassName("animate"), 750);
+        applyEffects(last.getElementsByClassName("animate"), 350);
     }, 500)
 });
 
