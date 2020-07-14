@@ -235,7 +235,7 @@ main::before {
 
 main {
     min-height: 100%;
-    padding: 15% 20%;
+    padding: 15% 12%;
     justify-content: center;
     display: flex;
     align-items: center;
@@ -406,7 +406,7 @@ input, .btn, submit {
     background-color: hsl(253, 23%, 15%);
     min-height: 100%;
 
-    padding: 235px 15%; 
+    padding: 150px 12%; 
     justify-content: center;
     display: flex;
     align-items: left;
@@ -528,17 +528,25 @@ input, .btn, submit {
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: 235px 0;
+    padding: 150px 12%;
     perspective: 1000px;
 }
 
 #design section {
     z-index: 1;
-    right: 7%;
     width: 55%;
     display: block;
 }
+@media only screen and (max-width: 1000px) {
+    #half {
+        visibility: hidden;
+    }
+    #design section {
 
+        width: auto;
+        left: auto;
+    }
+}
 #design img {
     min-width: 350px;
     max-height: 400px;
