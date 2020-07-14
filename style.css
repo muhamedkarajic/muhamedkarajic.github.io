@@ -406,13 +406,14 @@ input, .btn, submit {
     background-color: hsl(253, 23%, 15%);
     min-height: 100%;
 
-    padding: 0 15%; 
+    padding: 235px 15%; 
     justify-content: center;
     display: flex;
     align-items: left;
     flex-direction: column;
     perspective: 1000px;
     position: relative;
+
     z-index: 50;
 }
 
@@ -442,7 +443,6 @@ input, .btn, submit {
 #about section {
     z-index: 1;
     width: 55%;
-    padding: 100px 0;
 }
 
 #about section h2 {
@@ -528,7 +528,7 @@ input, .btn, submit {
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: 100px 0;
+    padding: 235px 0;
     perspective: 1000px;
 }
 
