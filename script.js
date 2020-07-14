@@ -37,12 +37,17 @@ function removeEffects(x) {
 
 var myFullpage = new fullpage('#fullpage', {
     v2compatible: true,
-    scrollOverflow:true,
+    scrollOverflow: true,
     navigation: true,
     licenseKey: 'bobwH@p8',
     onLeave: function (anchorLink, index) {
         let newSection = sections[index - 1];
+        timeOuts.forEach(timeOut => {
+            clearTimeout(timeOut);
+        });
+        console.log("section", newSection);
         applyEffects(newSection.getElementsByClassName("animate"), 1000);
+        
     },
 
     afterLoad: function (anchorLink, index) {
