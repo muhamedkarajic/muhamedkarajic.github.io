@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lato:400,900&display=swap");
 #fp-nav ul li a span {
     background-color: rgba(255, 255, 255, 0.849);
 }
@@ -71,7 +71,6 @@
     }
 }
 
-
 @keyframes fade {
     0% {
         opacity: 1;
@@ -102,7 +101,6 @@
     }
 }
 
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -112,45 +110,41 @@
     }
 }
 
-
 .fade {
     animation: fade infinite ease-out 2s;
 }
 
 .bottomIn {
-    animation: bottomIn forwards ease-in .75s;
+    animation: bottomIn forwards ease-in 0.75s;
 }
 
 .topIn {
-    animation: topIn forwards ease-out .75s;
+    animation: topIn forwards ease-out 0.75s;
 }
 
 .growIn {
-    animation: growIn forwards ease-out .75s;
+    animation: growIn forwards ease-out 0.75s;
 }
 
 .leftIn {
-    animation: leftIn forwards ease-out .75s;
+    animation: leftIn forwards ease-out 0.75s;
 }
 
 .rightIn {
-    animation: rightIn forwards ease-out .75s;
+    animation: rightIn forwards ease-out 0.75s;
 }
 
 .fadeOut {
-    animation: fadeOut forwards ease-out .75s 5s;
+    animation: fadeOut forwards ease-out 0.75s 5s;
 }
-
 
 .fadeIn {
     animation: fadeIn forwards ease-out 2s;
 }
 
-.move
-{
+.move {
     animation: move 3s ease-out infinite;
 }
-
 
 nav {
     margin: 0 7%;
@@ -163,7 +157,7 @@ nav a {
     text-transform: uppercase;
     font-weight: 600;
     text-align: center;
-    color: #F4F4F4;
+    color: #f4f4f4;
     text-decoration: none;
     font-size: 16px;
     display: inline;
@@ -180,7 +174,7 @@ nav a:hover {
         text-align: left !important;
     }
     nav a {
-        color: #2D2D2D !important;
+        color: #2d2d2d !important;
     }
     nav a:hover {
         color: rgb(94, 94, 94) !important;
@@ -190,15 +184,21 @@ nav a:hover {
     }
 }
 
-html, body {
+html,
+body {
     height: 100%;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     scrollbar-width: none;
     background-color: rgb(32, 32, 32);
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lato', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lato", sans-serif;
     font-weight: 900;
     opacity: 1;
 }
@@ -211,7 +211,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 main::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     right: 0;
@@ -231,7 +231,6 @@ main::before {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fe6ab3', endColorstr='#ad81fa', GradientType=1);
     /* IE6-9 fallback on horizontal gradient */
 }
-
 
 main {
     min-height: 100%;
@@ -270,7 +269,9 @@ main section p {
     #title-underline {
         width: 65%;
     }
-    h1, h2, h3 {
+    h1,
+    h2,
+    h3 {
         word-wrap: break-word;
     }
     main section h1 {
@@ -281,7 +282,9 @@ main section p {
     }
 }
 
-input, .btn, submit {
+input,
+.btn,
+submit {
     border: none;
 }
 
@@ -295,8 +298,8 @@ input, .btn, submit {
     padding: 9px 32px;
     font-size: 16px;
     font-weight: 600;
-    letter-spacing: .1em;
-    transition: background-color .2s ease-out, color .2s ease-out, border .2s ease-out;
+    letter-spacing: 0.1em;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out, border 0.2s ease-out;
 }
 
 .btn:hover {
@@ -304,7 +307,6 @@ input, .btn, submit {
     /* Old browsers */
     cursor: pointer;
     color: hsl(253, 23%, 15%);
-    ;
     border-color: white;
 }
 
@@ -369,7 +371,6 @@ input, .btn, submit {
 }
 
 .column img {
-
     height: 75px;
 
     display: block;
@@ -378,8 +379,7 @@ input, .btn, submit {
     padding: 10px;
 }
 
-.column p
-{
+.column p {
     color: white;
     opacity: 1;
     margin-top: 10px;
@@ -395,7 +395,8 @@ input, .btn, submit {
     .column {
         width: 25%;
     }
-    #right, #left {
+    #right,
+    #left {
         visibility: hidden;
     }
 }
@@ -406,7 +407,7 @@ input, .btn, submit {
     background-color: hsl(253, 23%, 15%);
     min-height: 100%;
 
-    padding: 150px 12%; 
+    padding: 150px 12%;
     justify-content: center;
     display: flex;
     align-items: left;
@@ -418,7 +419,7 @@ input, .btn, submit {
 }
 
 #about::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     right: 0;
@@ -518,9 +519,6 @@ input, .btn, submit {
     position: relative;
 }
 
-
-
-
 #design {
     background: rgb(32, 32, 32);
     display: flex;
@@ -542,7 +540,6 @@ input, .btn, submit {
         visibility: hidden;
     }
     #design section {
-
         width: auto;
         left: auto;
     }
@@ -611,89 +608,73 @@ input, .btn, submit {
     opacity: 0;
 }
 
-#fp-nav ul li a
-{
+#fp-nav ul li a {
     padding: 9px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .container {
     position: absolute;
+    display: block;
+    cursor: pointer;
+
     bottom: 85px;
     left: 50%;
-  }
-  
-  .chevron {
+    transform: translateX(-50%);
+}
+.innerContainer {
+    position: relative;
+    min-width: 55px;
+    min-height: 65px;
+}
+.chevron {
+    transform-origin: center;
     position: absolute;
     width: 28px;
+    left: 50%;
     height: 8px;
-    transform: scale3d(0.5, 0.5, 0.5);
-  }
-  
-  .chevron:before,
-  .chevron:after {
-    content: ' ';
+    transform: scale(0.5, 0.5) translateX(-100%);
+}
+
+.chevron:before,
+.chevron:after {
+    content: " ";
     position: absolute;
     top: 0;
     height: 100%;
     width: 51%;
     background: #fff;
-  }
-  
-  .chevron:before {
+}
+
+.chevron:before {
     left: 0;
     transform: skew(0deg, 30deg);
-  }
-  
-  .chevron:after {
+}
+
+.chevron:after {
     right: 0;
     width: 50%;
     transform: skew(0deg, -30deg);
-  }
-  
-  @keyframes move {
+}
+
+@keyframes move {
     25% {
-      opacity: 1;
-  
+        opacity: 1;
     }
     33% {
-      opacity: 1;
-      transform: translateY(30px);
+        opacity: 1;
+        transform: translateY(30px) translateX(-50%);
     }
     67% {
-      opacity: 1;
-      transform: translateY(40px);
+        opacity: 1;
+        transform: translateY(50px) translateX(-50%);
     }
     100% {
-      opacity: 0;
-      transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+        opacity: 0;
+        transform: translateY(55px) scale(0.5, 0.5) translateX(-100%);
     }
-  }
-  
-  .text {
+}
+
+.text {
     display: block;
     margin-top: 75px;
     margin-left: -30px;
@@ -702,22 +683,20 @@ input, .btn, submit {
     color: #fff;
     text-transform: uppercase;
     white-space: nowrap;
-    opacity: .25;
+    opacity: 0.25;
     animation: pulse 2s linear alternate infinite;
-  }
-  
-  @keyframes pulse {
+}
+
+@keyframes pulse {
     from {
-      opacity: 1;
+        opacity: 1;
     }
-    to
-    {
-        opacity: .25;
+    to {
+        opacity: 0.25;
     }
+}
 
-  }
-
-  .fp-no-easing {
-    -webkit-transition: all 0s ease-out !important; 
+.fp-no-easing {
+    -webkit-transition: all 0s ease-out !important;
     transition: all 0s ease-out !important;
 }

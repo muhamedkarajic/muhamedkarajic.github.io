@@ -1,3 +1,51 @@
+$('#fullpage').fullpage({
+    v2compatible: true,
+    scrollOverflow: true,
+    css3:true,
+    scrollingSpeed: 500,
+    navigation: true,
+    licenseKey: 'bobwH@p8',
+    onLeave: function (anchorLink, index) {
+        let newSection = sections[index - 1];
+        timeOuts.forEach(timeOut => {
+            clearTimeout(timeOut);
+        });
+        console.log("section", newSection);
+        applyEffects(newSection.getElementsByClassName("animate"), 1000);
+        
+    },
+
+    afterLoad: function (anchorLink, index) {
+        let currentSection = sections[index - 1];
+
+        if (!currentSection.classList.contains('fp-auto-height')) {
+            for (let i = 0; i < sections.length; i++) {
+                const section = sections[i];
+                if (section != currentSection)
+                    removeEffects(section.getElementsByClassName("animate"));
+            }
+            for (let j = 0; j < fp_auto_height.length; j++)
+                removeEffects(fp_auto_height[j].getElementsByClassName("animate"));
+            fp_auto_height = [];
+        }
+        last = currentSection;
+    }
+});
+
+$('#button').click(function(){
+    // var destination = $(this).closest('li');
+    console.log("CLICKED");
+    $.fn.fullpage.moveTo(2);
+});
+
+function activateNavItem(item){
+    item.addClass('active').siblings().removeClass('active');
+}
+function activateNavItem(item){
+    item.addClass('active').siblings().removeClass('active');
+}
+
+
 var sections = document.getElementsByClassName("section");
 var last = sections[0];
 var timeOuts = new Array();
@@ -35,39 +83,6 @@ function removeEffects(x) {
 }
 
 
-var myFullpage = new fullpage('#fullpage', {
-    v2compatible: true,
-    scrollOverflow: true,
-    css3:true,
-    scrollingSpeed: 500,
-    navigation: true,
-    licenseKey: 'bobwH@p8',
-    onLeave: function (anchorLink, index) {
-        let newSection = sections[index - 1];
-        timeOuts.forEach(timeOut => {
-            clearTimeout(timeOut);
-        });
-        console.log("section", newSection);
-        applyEffects(newSection.getElementsByClassName("animate"), 1000);
-        
-    },
-
-    afterLoad: function (anchorLink, index) {
-        let currentSection = sections[index - 1];
-
-        if (!currentSection.classList.contains('fp-auto-height')) {
-            for (let i = 0; i < sections.length; i++) {
-                const section = sections[i];
-                if (section != currentSection)
-                    removeEffects(section.getElementsByClassName("animate"));
-            }
-            for (let j = 0; j < fp_auto_height.length; j++)
-                removeEffects(fp_auto_height[j].getElementsByClassName("animate"));
-            fp_auto_height = [];
-        }
-        last = currentSection;
-    }
-});
 
 window.addEventListener("load", function () {
     setTimeout(function () {

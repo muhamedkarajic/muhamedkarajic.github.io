@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Muhamed Karajic</title>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="fullpage/fullpage.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div id="fullpage">
+
         <div class="section">
+
             <main id="main">
                 <img class="selectMoveDisable" id="right" src="/img/rightW.svg">
                 <img class="selectMoveDisable" id="left" src="/img/leftW.svg">
@@ -32,10 +34,12 @@
                         data-animation="bottomIn" class="animate btn">PREVIEW CV</a>
 
                 </section>
-                <div class="container">
-                    <div class="chevron animate" data-animation="move" data-delay="2000"></div>
-                    <div class="chevron animate" data-animation="move" data-delay="3000"></div>
-                    <div class="chevron animate" data-animation="move" data-delay="4000"></div>
+                <div class="container" id="button" >
+                    <div class="innerContainer">
+                        <div class="chevron animate" data-animation="move" data-delay="2000"></div>
+                        <div class="chevron animate" data-animation="move" data-delay="3000"></div>
+                        <div class="chevron animate" data-animation="move" data-delay="3800"></div>
+                    </div>
                 </div>
             </main>
         </div>
