@@ -38,6 +38,8 @@ function removeEffects(x) {
 var myFullpage = new fullpage('#fullpage', {
     v2compatible: true,
     scrollOverflow: true,
+    css3:true,
+    scrollingSpeed: 500,
     navigation: true,
     licenseKey: 'bobwH@p8',
     onLeave: function (anchorLink, index) {
@@ -72,3 +74,19 @@ window.addEventListener("load", function () {
         applyEffects(last.getElementsByClassName("animate"), 1000);
     }, 500)
 });
+
+
+window.onresize =function() {
+
+    // rebuild immediately on touch devices
+    console.log("Works...!");
+    if (isTouchDevice) {
+        $.fn.fullpage.reBuild();
+    } else {
+        $.fn.fullpage.setScrollingSpeed(0);
+        $('.fp-easings').addClass('.fp-no-transitions');
+        $.fn.fullpage.reBuild();
+        $.fn.fullpage.setScrollingSpeed(700); //default one
+        $('.fp-easings').removeClass('.fp-no-transitions');
+    }
+};

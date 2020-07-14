@@ -716,3 +716,8 @@ input, .btn, submit {
     }
 
   }
+
+  .fp-no-easing {
+    -webkit-transition: all 0s ease-out !important; 
+    transition: all 0s ease-out !important;
+}
